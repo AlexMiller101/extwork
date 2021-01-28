@@ -1,0 +1,25 @@
+{
+    "manifest_version":2,
+    "name":"Demo Notepad",
+    "version":"2.0",
+    "description":"A very Demo Notes Taking",
+    "author":"NoteUser",
+    "icons":{
+        "128":"notepad.png"
+    },
+
+    "browser_action":{
+        "default_icon":"notepad.png",
+        "default_title":"Demo Text Notes",
+        "default_popup":"popup.html"
+    },
+
+    "content_scripts":[
+        {
+            "matches":[
+                "<all_urls>"
+            ],
+            "js": ["content.js"]
+        }
+    ]
+}
